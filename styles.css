@@ -1,0 +1,142 @@
+/* styles.css */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e; /* Fondo oscuro */
+    color: #00ff00; /* Texto verde brillante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background: rgba(30, 30, 30, 0.9); /* Fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 400px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.5);
+}
+
+.input-section {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100px;
+    border: 2px solid #00ff00; /* Borde verde brillante */
+    border-radius: 5px;
+    background-color: #2e2e2e; /* Fondo del input oscuro */
+    color: #00ff00; /* Texto verde brillante */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+    border-color: #00cc00; /* Borde más claro al enfocar */
+    outline: none;
+    background-color: #3e3e3e; /* Fondo más claro al enfocar */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00cc00; /* Verde brillante */
+    color: black;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 5px; /* Espaciado entre botones */
+}
+
+button:hover {
+    background-color: #009900; /* Verde más oscuro al pasar el ratón */
+    transform: translateY(-2px);
+}
+
+.prediction {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#numberList {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#numberList li {
+    padding: 5px;
+    background-color: #2e2e2e; /* Fondo oscuro para los números */
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#numberList li:hover {
+    background-color: #3e3e3e; /* Fondo más claro al pasar el ratón */
+}
+
+.prediction-result {
+    margin-top: 20px;
+    background-color: rgba(255, 0, 0, 0.8); /* Color flúor rojo */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.prediction-result h2 {
+    margin: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.effectiveness {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background-color: #555; /* Fondo de la barra */
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Necesario para el efecto de llenado */
+}
+
+.progress {
+    background: linear-gradient(to top, #ff0000, #530000); /* Gradiente para el efecto de líquido */
+    height: 100%;
+    width: 0%; /* Inicialmente 0% */
+    transition: width 0.5s; /* Animación suave */
+    position: absolute; /* Para el efecto de llenado */
+    bottom: 0; /* Llenar desde la parte inferior */
+    left: 0;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.progress.red {
+    background: linear-gradient(to top, #2bff00, #06ff12); /* Gradiente rojo */
+}
+
+#effectivenessPercentage {
+    margin-top: 5px;
+    font-size: 18px;
+    color: #dedcff; /* Texto verde */
+}

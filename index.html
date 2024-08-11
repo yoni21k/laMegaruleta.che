@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Apuestas en Ruleta con IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Predicción de Apuestas en Ruleta con IA</h1>
+        <div class="input-section">
+            <h2>Ingresa un número:</h2>
+            <input type="number" id="numberInput" min="1" max="36" placeholder="Número del 1 al 36" onkeydown="handleKeydown(event)">
+            <button onclick="addNumber()">Agregar Número</button>
+        </div>
+        <div class="prediction">
+            <h2>Últimos Números:</h2>
+            <ul id="numberList"></ul>
+        </div>
+        <div class="prediction-result">
+            <h2>Predicción:</h2>
+            <div id="prediction"></div>
+        </div>
+        <div class="result-buttons">
+            <button onclick="updateEffectiveness(true)">Ganada</button>
+            <button onclick="updateEffectiveness(false)">Perdida</button>
+        </div>
+        <div class="effectiveness">
+            <h2>Porcentaje de Efectividad:</h2>
+            <div class="progress-bar">
+                <div id="progress" class="progress"></div>
+            </div>
+            <div id="effectivenessPercentage">0%</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
