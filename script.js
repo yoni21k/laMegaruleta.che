@@ -72,7 +72,7 @@ function predictNext() {
         prediction = 'Par';
     } else {
         // Aquí puedes agregar más lógica para predecir colores y altos/bajos
-        prediction = 'No hay suficiente información para predecir.';
+        prediction = 'Rojo'; // Cambia este valor según tu lógica
     }
 
     displayPrediction(prediction);
